@@ -1,0 +1,51 @@
+{% render 'hero' with {
+    settings: section.settings
+} %} 
+
+ {% schema %}
+{
+    "name": "Hero", 
+    "settings": [ 
+      { 
+         "type": "text",
+         "id": "heading", 
+         "label": "Heading", 
+         "default": "New Heading"
+      }, 
+      {
+          "type": "textarea", 
+          "id": "copy", 
+          "label": "Copy text",
+          "default": "Text Is the most important prt of any website in the world"
+      }, 
+      { 
+          "type": "url", 
+          "id": "link_url", 
+          "label": "Link URL"
+      }, 
+      { 
+          "type": "text", 
+          "id": "link_text", 
+          "label": "Link Text", 
+          "default": "Click here"
+      }, 
+      { 
+          "type": "image_picker", 
+          "id": "small_image", 
+          "label": "Small Image", 
+          "info": "Dimensions: 991х991"
+      }, 
+      {
+          "type": "image_picker", 
+          "id": "large_image", 
+          "label": "Large Image"
+      }
+    ], 
+    "presets":  [
+     { 
+         "name": "Hero", 
+         "category": "Image with text"
+     }
+    ]
+}
+{% endschema %}

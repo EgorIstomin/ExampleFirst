@@ -1,0 +1,10 @@
+{% comment %} 
+  Requires the following arguments 
+yarn 
+  - settings
+{% endcomment%}
+<section class="hero">
+    <h2 class="hero__heading">{{ settings.heading }}</h2> 
+    <p class="hero__copy">{{ settings.copy }}</p>
+    <a href="{{ settings.link_url }}" class="hero__link">{{ settings.link_text }}</a>
+</section>
