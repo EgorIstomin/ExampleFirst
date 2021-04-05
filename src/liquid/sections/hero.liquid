@@ -1,5 +1,6 @@
 {% render 'hero' with {
-    settings: section.settings
+    settings: section.settings, 
+    id: section.id
 } %} 
 
  {% schema %}
@@ -39,6 +40,23 @@
           "type": "image_picker", 
           "id": "large_image", 
           "label": "Large Image"
+      },
+      { 
+          "type": "select", 
+          "label": "Alignment",
+          "default": "left",
+          "id": "alignment", 
+    
+          "options": [ 
+          {
+              "label": "Left", 
+              "value": "left"
+          }, 
+          { 
+              "label": "Center", 
+              "value": "center"
+          }
+         ]
       }
     ], 
     "presets":  [

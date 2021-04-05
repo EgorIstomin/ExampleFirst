@@ -1,3 +1,69 @@
 .hero { 
-    background-color: brown;
+    align-items: center; 
+    background-position: center center; 
+    background-size: cover; 
+    color: white; 
+    display: flex; 
+    height: 100vw; 
+    justify-content: flex-start; 
+    padding: 50px 50px; 
+    position: relative; 
+    width: 100%; 
+
+    @media (min-width: 992px) { 
+        height: 60vh; 
+        padding: 100px 200px; 
+    }
+}
+
+.hero__overlay { 
+    background-color: rgba(0, 0, 0, 0.3); 
+    height: 100%;
+    left: 0; 
+    position: absolute;
+    top: 0; 
+    width: 100%;
+} 
+
+.hero__content { 
+    position: relative;
+
+    &--center { 
+        text-align: center;
+    }
+} 
+.hero__heading { 
+    font-size: 2.3rem; 
+    margin-bottom: 1.4rem; 
+    margin-top: 0;
+
+    @media (min-width: 600px) { 
+        font-size: 3.5rem; 
+    }
+}
+
+.hero__copy { 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    margin-bottom: 1.8rem; 
+
+    @media (min-width: 600px) { 
+        font-size: 1.6rem; 
+    }
+}
+.hero__link { 
+    background-color: white;
+    border-radius: 3px; 
+    color: black; 
+    display: inline-block; 
+    font-weight: $font-weight-bold; 
+    padding: 15px 50px; 
+    text-decoration: none; 
+    transition-duration: 250ms;
+    transition-timing-function: ease-out; 
+
+    &:hover { 
+        background-color: #2a2a2a;
+        color: white;
+    }
 }

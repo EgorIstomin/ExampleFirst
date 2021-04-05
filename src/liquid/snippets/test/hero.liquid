@@ -2,9 +2,28 @@
   Requires the following arguments 
 yarn 
   - settings
+  - id 
 {% endcomment%}
-<section class="hero">
+<style> 
+   .hero--{{ id }} { 
+       background-image: url({{ settings.small_image | img_url: 'master' }}); 
+   }
+
+   @media (min-width: 600px) { 
+     .hero--{{ id }} { 
+       background-image: url( {{ settings.large_image | img_url: "600x"}})
+     }
+   }
+   @media (min-width: 992px) {
+     .hero--{{ id }} {  background-image: url({{ settings.large_image | img_url: 'master'}}); 
+   }
+  }
+</style>
+<section class="hero hero--{{ id }}">
+  <div class="hero__overlay"></div>
+  <div class="hero__content hero__content--{{ settings.alignment }}"> 
     <h2 class="hero__heading">{{ settings.heading }}</h2> 
     <p class="hero__copy">{{ settings.copy }}</p>
     <a href="{{ settings.link_url }}" class="hero__link">{{ settings.link_text }}</a>
+  </div>
 </section>
